@@ -12,6 +12,34 @@ body {
       margin: 0 auto;
       max-height: 80vh;
       color: #eee;
+
+
+
+      .gridBlock {
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        .box {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          cursor:pointer;
+
+          img {
+            filter:invert(1);
+            height:50%;
+            object-fit: contain;
+            transition:scale 0.2s;
+          }
+
+          &:hover img {
+            scale:1.1;
+          }
+        }
+      }
+
+
     }
   }
 }
